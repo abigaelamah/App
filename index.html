@@ -39,7 +39,7 @@
             flex-direction: column;
             gap: 15px;
         }
-        .space { margin-bottom: 20px; }
+        .space { margin-bottom: 40px; }
     </style>
 </head>
 <body>
@@ -74,17 +74,21 @@
 
     <div class="container hidden" id="bank-page">
         <h2>Bank Transfer</h2>
-        <input type="text" id="bank-name" placeholder="Bank Name" required>
-        <input type="text" id="account-holder" placeholder="Account Holder Name" required>
-        <input type="text" id="account-number" placeholder="Account Number" required>
-        <input type="number" id="bank-amount" placeholder="Amount (1000 - 5000000 KES)" required>
+        <div class="input-group">
+            <input type="text" id="bank-name" placeholder="Bank Name" required>
+            <input type="text" id="account-holder" placeholder="Account Holder Name" required>
+            <input type="text" id="account-number" placeholder="Account Number" required>
+            <input type="number" id="bank-amount" placeholder="Amount (1000 - 5000000 KES)" required>
+        </div>
         <button onclick="submitTransaction('Bank', 'account-number', 'bank-amount')">Submit</button>
     </div>
 
     <div class="container hidden" id="paypal-page">
         <h2>Paypal Transfer</h2>
-        <input type="email" id="paypal-email" placeholder="example@gmail.com" required>
-        <input type="number" id="paypal-amount" placeholder="Amount (1000 - 5000000 KES)" required>
+        <div class="input-group">
+            <input type="email" id="paypal-email" placeholder="example@gmail.com" required>
+            <input type="number" id="paypal-amount" placeholder="Amount (1000 - 5000000 KES)" required>
+        </div>
         <button onclick="submitTransaction('Paypal', 'paypal-email', 'paypal-amount')">Submit</button>
     </div>
     
